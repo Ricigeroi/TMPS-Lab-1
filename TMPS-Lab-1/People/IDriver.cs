@@ -9,5 +9,6 @@ namespace TMPS_Lab_1.People
     internal interface IDriver
     {
         public void Drive();
+        public string Describe();
     }
 }

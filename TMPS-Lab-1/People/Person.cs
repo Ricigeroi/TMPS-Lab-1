@@ -19,9 +19,9 @@ namespace TMPS_Lab_1.People
             this.age = age;
         }
 
-        public void Describe()
+        public virtual string Describe()
         {
-            Console.WriteLine("Person " + name + " " + surname + " " + age + " years old");
+            return name + " " + surname;
 
         }
     }

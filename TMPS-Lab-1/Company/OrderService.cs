@@ -5,13 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using TMPS_Lab_1.Cars;
 
-namespace TMPS_Lab_1
+namespace TMPS_Lab_1.Company
 {
     internal class OrderService
     {
         private TaxiCompany company;
 
-        
+
         public OrderService(TaxiCompany company)
         {
             this.company = company;
@@ -19,7 +19,10 @@ namespace TMPS_Lab_1
 
         public void MakeOrder()
         {
-
+            Car car = company.carManager.FindCarByIdOrder(0);
+            Console.WriteLine("Finded a car:");
+            car.Describe();
+            car.Run();
         }
     }
 }
