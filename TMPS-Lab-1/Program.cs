@@ -11,7 +11,7 @@ namespace TMPS_Lab_1
 {
     internal class Program
     {
-        public static int Main()
+        public static void Main()
         {
             // Company
             TaxiCompany company = new TaxiCompany();
@@ -43,8 +43,6 @@ namespace TMPS_Lab_1
             {
                 order.Describe();
             }
-
-            return 0;
         }
     }
 }

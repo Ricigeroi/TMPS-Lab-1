@@ -25,8 +25,6 @@ namespace TMPS_Lab_1.Company
         }
         
 
-        
-
         public List<Order> GetOrders()
         {
             return orders;

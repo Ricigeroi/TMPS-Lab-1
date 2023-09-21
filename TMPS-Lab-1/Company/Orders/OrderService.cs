@@ -17,10 +17,11 @@ namespace TMPS_Lab_1.Company
             this.company = company;
         }
 
+
         public void MakeOrder()
         {
             Car car = company.carManager.FindCarByIdOrder(0);
-            Console.WriteLine("Finded a car:");
+            Console.WriteLine("Found a car:");
             car.Describe();
             car.Run();
         }

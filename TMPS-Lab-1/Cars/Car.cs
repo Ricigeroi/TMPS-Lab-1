@@ -19,6 +19,7 @@ namespace TMPS_Lab_1.Cars
         protected IDriver driver;
         protected int id_order;
 
+
         public Car(TaxiCompany company, int id_car, string model, int year, Engine engine, int id_order = 0)
         {
             this.company = company;
@@ -29,8 +30,6 @@ namespace TMPS_Lab_1.Cars
             this.tank = new Tank(engine.GetTypeOfEngine(), 40, 40);
             this.driver = company.driverManager.FindDriverByIdCar(0);
             this.id_order = id_order;
-
-
         }
 
         public void Run()
