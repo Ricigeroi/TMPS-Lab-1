@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TMPS_Lab_1
+namespace TMPS_Lab_1.People
 {
-    internal interface IEngine
+    internal interface IDriver
     {
-        public void Start() { }
-        
+        public void Drive();
     }
 }

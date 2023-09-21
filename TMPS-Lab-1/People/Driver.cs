@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TMPS_Lab_1.People;
 
 namespace TMPS_Lab_1
 {
-    internal class Driver : Person
+    internal class Driver : Person, IDriver
     {
         private int exp;
 

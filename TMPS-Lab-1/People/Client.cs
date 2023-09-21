@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TMPS_Lab_1.People;
+
 
 namespace TMPS_Lab_1
 {
-    internal class Client : Person
+    internal class Client : Person, IClient
     {
         private int money;
+        
         
         public Client(string name, string surname, int age, int money) : base(name, surname, age)
         {
@@ -20,8 +23,9 @@ namespace TMPS_Lab_1
 
         public void MakeOrder(TaxiCompany company)
         {
-            Console.WriteLine("Client " + name + " " + surname + " have just made an order!");
-            company.AddOrder(10);
+            // Console.WriteLine("Client " + name + " " + surname + " have just made an order!");
+            OrderService orderService = new OrderService(company);
+            orderService.MakeOrder();
         }
     }
 }

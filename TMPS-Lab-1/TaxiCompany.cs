@@ -4,6 +4,8 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TMPS_Lab_1.Cars;
+using TMPS_Lab_1.People;
 
 namespace TMPS_Lab_1
 {
@@ -13,6 +15,7 @@ namespace TMPS_Lab_1
         public List<Driver> drivers = new List<Driver>();
         public List<Client> clients = new List<Client>();
         public List<Order> orders = new List<Order>();
+
 
         public List<Car> GetCars()
         {
@@ -41,9 +44,9 @@ namespace TMPS_Lab_1
             clients.Add(new Client(name, surname, age, money));
         }
 
-        public void AddOrder(int distance)
+        public void AddOrder(int distance, Car car, Driver driver, Client client)
         {
-            orders.Add(new Order(orders.Count + 1, distance));
+            orders.Add(new Order(orders.Count + 1, distance, car, driver, client));
         }
 
         public void DisplayCars()

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TMPS_Lab_1.Cars;
+using TMPS_Lab_1.People;
 
 namespace TMPS_Lab_1
 {
@@ -10,6 +12,7 @@ namespace TMPS_Lab_1
     {
         public static int Main()
         {
+            // Company
             TaxiCompany company = new TaxiCompany();
 
             // Drivers
@@ -28,12 +31,15 @@ namespace TMPS_Lab_1
             company.AddCar("Renault Zoe", 2018, zoe_engine);
             company.AddCar("Dacia Logan", 2007, dacia_engine);
 
+            
+
 
 
 
             foreach (Car car in company.GetCars())
             {
                 car.Run();
+
             }
 
             foreach(Client client in company.GetClients())
