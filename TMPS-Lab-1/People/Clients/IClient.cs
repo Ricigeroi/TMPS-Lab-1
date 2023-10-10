@@ -9,6 +9,6 @@ namespace TMPS_Lab_1.People
 {
     internal interface IClient
     {
-        public void MakeOrder(TaxiCompany company);
+        public void MakeOrder();
     }
 }

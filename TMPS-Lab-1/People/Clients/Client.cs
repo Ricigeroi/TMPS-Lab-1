@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TMPS_Lab_1.Cars;
 using TMPS_Lab_1.Company;
 
 namespace TMPS_Lab_1.People
@@ -20,11 +21,10 @@ namespace TMPS_Lab_1.People
             this.money = money;
         }
 
-        public void MakeOrder(TaxiCompany company)
+        public void MakeOrder()
         {
             Console.WriteLine("Client " + name + " " + surname + " have just made an order!");
-            OrderService orderService = new OrderService(company);
-            orderService.MakeOrder();
+            OrderService.MakeOrder();
         }
     }
 }

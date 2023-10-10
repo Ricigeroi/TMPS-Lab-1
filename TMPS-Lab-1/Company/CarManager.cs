@@ -17,9 +17,29 @@ namespace TMPS_Lab_1.Company
             this.company = company;
         }
 
-        public void AddCar(string model, int year, Engine engine)
+
+        public void AddCar(string model, int year, Engine engine, string version, bool abs_system)
         {
-            cars.Add(new Car(company, cars.Count + 1, model, year, engine));
+
+            Car car = new Car(cars.Count + 1, model, year, engine);
+            var director = new Director();
+            if (version == "premium")
+            {
+                director.Builder = new CarBuilderPremium(car);
+            }
+            if (version == "simple")
+            {
+                director.Builder = new CarBuilderSimple(car);
+            }
+            if (abs_system)
+            {
+                cars.Add(director.BuildCarWithABS());
+            }
+            else
+            {
+                cars.Add(director.BuildCarWithoutABS());
+            }
+            
         }
 
         // Search for a car by id_order

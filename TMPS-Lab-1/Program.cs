@@ -29,15 +29,14 @@ namespace TMPS_Lab_1
             Engine dacia_engine = new("diesel fuel", 90);
 
             // Cars
-            company.carManager.AddCar("Toyota Prius", 2012, prius_engine);
+            company.carManager.AddCar("Toyota Prius", 2012, prius_engine, "premium", false);
             // company.carManager.AddCar("Renault Zoe", 2018, zoe_engine);
             // scompany.carManager.AddCar("Dacia Logan", 2007, dacia_engine);
 
-            
 
             foreach(Client client in company.clientManager.GetClients())
             {
-                client.MakeOrder(company);
+                client.MakeOrder();
             }
             
             foreach(Order order in company.GetOrders())

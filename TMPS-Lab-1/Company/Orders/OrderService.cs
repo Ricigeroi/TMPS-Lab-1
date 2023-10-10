@@ -9,21 +9,16 @@ namespace TMPS_Lab_1.Company
 {
     internal class OrderService
     {
-        private TaxiCompany company;
-
-
-        public OrderService(TaxiCompany company)
+        public static void MakeOrder()
         {
-            this.company = company;
-        }
-
-
-        public void MakeOrder()
-        {
-            Car car = company.carManager.FindCarByIdOrder(0);
-            Console.WriteLine("Found a car:");
-            car.Describe();
-            car.Run();
+            Car car = TaxiCompany.GetInstance().carManager.FindCarByIdOrder(0);
+            if (car != null)
+            {
+                Console.WriteLine("Found a car:");
+                car.Describe();
+                car.Run();
+            }
+            
         }
     }
 }

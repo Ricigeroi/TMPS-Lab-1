@@ -12,7 +12,7 @@ namespace TMPS_Lab_1.Company
     internal class TaxiCompany
     {
         // Singleton pattern
-        private static TaxiCompany _instance;
+        private static TaxiCompany instance;
 
         public List<Order> orders = new List<Order>();
         public CarManager carManager;
@@ -25,19 +25,19 @@ namespace TMPS_Lab_1.Company
             this.carManager = new CarManager(this);
             this.driverManager = new DriverManager();
             this.clientManager = new ClientManager();
-
         }
         
         // Mehtod to get this single instance of TaxiCompany
         public static TaxiCompany GetInstance()
         {
-            if (TaxiCompany._instance == null)
+            if (TaxiCompany.instance == null)
             {
-                return new TaxiCompany();
+                instance = new TaxiCompany();
+                return instance;
             }
             else
             {
-                return TaxiCompany._instance;
+                return TaxiCompany.instance;
             }
         }
 
