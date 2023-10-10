@@ -15,16 +15,18 @@ namespace TMPS_Lab_1.Cars
         }
 
 
-        public Car BuildCarWithABS ()
+        public Car BuildCarWithABS (Car car)
         {
+            this._builder.Reset(car);
             this._builder.AddABS();
             this._builder.AddClimate();
             this._builder.AddInterior();
             this._builder.AddMultimedia();
             return this._builder.GetCar();
         }
-        public Car BuildCarWithoutABS()
+        public Car BuildCarWithoutABS(Car car)
         {
+            this._builder.Reset(car);
             this._builder.AddClimate();
             this._builder.AddInterior();
             this._builder.AddMultimedia();

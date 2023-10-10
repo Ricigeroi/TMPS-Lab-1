@@ -22,7 +22,7 @@ namespace TMPS_Lab_1.Company
         // Singleton constuctor
         private TaxiCompany()
         {
-            this.carManager = new CarManager(this);
+            this.carManager = new CarManager();
             this.driverManager = new DriverManager();
             this.clientManager = new ClientManager();
         }

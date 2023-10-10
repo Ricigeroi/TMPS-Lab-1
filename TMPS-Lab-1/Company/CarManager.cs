@@ -10,34 +10,29 @@ namespace TMPS_Lab_1.Company
     internal class CarManager
     {
         private List<Car> cars = new List<Car>();
-        private TaxiCompany company;
-
-        public CarManager(TaxiCompany company)
-        {
-            this.company = company;
-        }
-
+        private Director director = new Director();
+        private CarBuilderSimple simple_builder = new CarBuilderSimple();
+        private CarBuilderPremium premium_builder = new CarBuilderPremium();
 
         public void AddCar(string model, int year, Engine engine, string version, bool abs_system)
         {
 
             Car car = new Car(cars.Count + 1, model, year, engine);
-            var director = new Director();
             if (version == "premium")
             {
-                director.Builder = new CarBuilderPremium(car);
+                director.Builder = premium_builder;
             }
             if (version == "simple")
             {
-                director.Builder = new CarBuilderSimple(car);
+                director.Builder = simple_builder;
             }
             if (abs_system)
             {
-                cars.Add(director.BuildCarWithABS());
+                cars.Add(director.BuildCarWithABS(car));
             }
             else
             {
-                cars.Add(director.BuildCarWithoutABS());
+                cars.Add(director.BuildCarWithoutABS(car));
             }
             
         }

@@ -9,6 +9,7 @@ namespace TMPS_Lab_1.Cars
 {
     internal interface IBuilder
     {
+        void Reset(Car car);
         void AddABS();
         void AddClimate();
         void AddInterior();

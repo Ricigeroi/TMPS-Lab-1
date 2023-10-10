@@ -12,10 +12,9 @@ namespace TMPS_Lab_1.Cars
 {
     internal class CarBuilderPremium : IBuilder
     {
-
         Car car;
 
-        public CarBuilderPremium(Car car)
+        public void Reset(Car car)
         {
             this.car = car;
         }

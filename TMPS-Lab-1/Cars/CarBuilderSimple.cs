@@ -10,10 +10,11 @@ namespace TMPS_Lab_1.Cars
     {
         Car car;
 
-        public CarBuilderSimple(Car car)
+        public void Reset(Car car)
         {
             this.car = car;
         }
+
         public void AddABS()
         {
             this.car.AddPart("ABS system");
