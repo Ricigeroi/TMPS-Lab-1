@@ -24,7 +24,7 @@ namespace TMPS_Lab_1.People
         public void MakeOrder()
         {
             Console.WriteLine("Client " + name + " " + surname + " have just made an order!");
-            OrderService.MakeOrder();
+            OrderService.MakeOrder(this);
         }
     }
 }

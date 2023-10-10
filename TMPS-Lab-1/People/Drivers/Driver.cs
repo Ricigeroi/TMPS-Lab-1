@@ -25,6 +25,10 @@ namespace TMPS_Lab_1.People
         }
 
 
+        public void GetInfo()
+        {
+            Console.WriteLine(name + " " + surname + " | Id car: " + id_car);
+        }
         public override string Describe()
         {
             return "Driver: " + name + " " + surname;
@@ -34,6 +38,10 @@ namespace TMPS_Lab_1.People
         public int GetIdCar()
         {
             return id_car;
+        }
+        public void SetIdCar(int id_car)
+        {
+            this.id_car = id_car;
         }
     }
 }

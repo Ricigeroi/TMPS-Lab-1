@@ -28,7 +28,7 @@ namespace TMPS_Lab_1.Cars
             this.year = year;
             this.engine = engine;
             this.tank = new Tank(engine.GetTypeOfEngine(), 40, 40);
-            this.driver = company.driverManager.FindDriverByIdCar(0);
+            this.driver = company.driverManager.FindDriverByIdCar(0, id_car);
             this.id_order = id_order;
         }
         
@@ -67,6 +67,16 @@ namespace TMPS_Lab_1.Cars
         public int GetIdOrder()
         {
             return id_order;
+        }
+
+        public int GetIDCar()
+        {
+            return id_car;
+        }
+
+        public Driver GetDriver()
+        {
+            return (Driver)this.driver;
         }
     }
 }

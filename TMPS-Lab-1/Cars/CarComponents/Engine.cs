@@ -23,6 +23,12 @@ namespace TMPS_Lab_1.Cars
             Console.WriteLine(power + "HP " + type + " engine has started!");
         }
 
+        // Prototype pattern
+        public Engine Copy()
+        {
+            return (Engine) this.MemberwiseClone();
+        }
+
         public string GetTypeOfEngine()
         {
             return type;
