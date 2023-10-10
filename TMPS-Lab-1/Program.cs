@@ -14,7 +14,8 @@ namespace TMPS_Lab_1
         public static void Main()
         {
             // Company
-            TaxiCompany company = new TaxiCompany();
+            // Using singleton method
+            TaxiCompany company = TaxiCompany.GetInstance();
 
             // Drivers
             company.driverManager.AddDriver("Domenic", "Torreto", 34);
